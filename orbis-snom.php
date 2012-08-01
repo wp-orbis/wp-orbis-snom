@@ -52,13 +52,18 @@ function orbis_snom_call_form( $number = '' ) {
 
 	$url = get_user_meta( $current_user->ID, '_orbis_snom_web_user_interface_url', true );
 
-	?>
-	<form method="post" action="<?php echo esc_attr( $url ); ?>" target="_blank">
-		<div>
-			<input name="NUMBER" type="text" value="<?php echo esc_attr( $number ); ?>" />
-			<input name="DIAL" type="submit" value="<?php esc_attr_e( 'Call', 'orbis_snom' ); ?>" class="btn" />
-		</div>
+	if( ! empty( $url ) && ! empty( $number ) ): ?>
+
+	<form method="post" action="<?php echo esc_attr( $url ); ?>" target="_blank" class="form-inline">
+		<input name="NUMBER" type="hidden" value="<?php echo esc_attr( $number ); ?>" />
+		<button name="DIAL" type="submit" class="btn">
+			<i class="icon-headphones"></i>
+			<?php _e( 'Call', 'orbis_snom' ); ?>
+		</button>
 	</form>
-	<?php		
+
+	<?php
+
+	endif;
 }
 
