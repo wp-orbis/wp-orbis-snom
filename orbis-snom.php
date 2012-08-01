@@ -56,7 +56,7 @@ function orbis_snom_call_form( $number = '' ) {
 	<form method="post" action="<?php echo esc_attr( $url ); ?>" target="_blank">
 		<div>
 			<input name="NUMBER" type="text" value="<?php echo esc_attr( $number ); ?>" />
-			<input name="DIAL" type="submit" value="<?php esc_attr_e( 'Call', 'orbis_snom' ); ?>" />
+			<input name="DIAL" type="submit" value="<?php esc_attr_e( 'Call', 'orbis_snom' ); ?>" class="btn" />
 		</div>
 	</form>
 	<?php		
