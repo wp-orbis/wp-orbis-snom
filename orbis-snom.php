@@ -67,3 +67,12 @@ function orbis_snom_call_form( $number = '' ) {
 	endif;
 }
 
+function orbis_snom_enqueue_scripts() {
+	wp_enqueue_script(
+		'orbis-snom',
+		plugins_url( 'includes/snom.js', __FILE__ ),
+		array( 'jquery' )
+	);
+}
+
+add_action( 'wp_enqueue_scripts', 'orbis_snom_enqueue_scripts' );

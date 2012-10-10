@@ -1,4 +1,4 @@
-=== Shopp (nl) ===
+=== Orbis SNOM ===
 Contributors: pronamic, remcotolsma
 Tags: orbis, snom, phone
 Donate link: http://pronamic.eu/donate/?for=wp-plugin-orbis-snom&source=wp-plugin-readme-txt
