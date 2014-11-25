@@ -1,0 +1,48 @@
+# Copyright (C) 2014 Pronamic
+# This file is distributed under the GPL.
+msgid ""
+msgstr ""
+"Project-Id-Version: Orbis SNOM 1.0.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/orbis-snom\n"
+"POT-Creation-Date: 2014-11-25 11:04:37+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: grunt-wp-i18n 0.4.9\n"
+
+#: orbis-snom.php:23
+msgid "SNOM"
+msgstr ""
+
+#: orbis-snom.php:29
+msgid "Web User Interface URL"
+msgstr ""
+
+#: orbis-snom.php:67
+msgid "Call"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Orbis SNOM"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://pronamic.eu/wp-plugins/orbis-snom/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Extends the Orbis plugin extends the Orbis plugin with some SNOM phone "
+"functions."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Pronamic"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://www.pronamic.eu/"
+msgstr ""

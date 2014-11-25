@@ -8,8 +8,14 @@ Version: 1.0.0
 Requires at least: 3.0
 
 Author: Pronamic
-Author URI: http://pronamic.eu/
+Author URI: http://www.pronamic.eu/
+
+Text Domain: orbis_snom
+Domain Path: /languages/
+
 License: GPL
+
+GitHub URI: https://github.com/wp-orbis/wp-orbis-snom
 */
 
 function orbis_snom_user_profile( $user ) {
@@ -37,7 +43,7 @@ add_action( 'edit_user_profile', 'orbis_snom_user_profile' );
 function orbis_snom_user_update( $user_id ) {
 	$snom_url = filter_input( INPUT_POST, '_orbis_snom_web_user_interface_url', FILTER_SANITIZE_STRING );
 
-	if ( empty ( $snom_url ) ) {
+	if ( empty( $snom_url ) ) {
 		delete_user_meta( $user_id , '_orbis_snom_web_user_interface_url' );
 	} else {
 		update_user_meta( $user_id, '_orbis_snom_web_user_interface_url', $snom_url );
