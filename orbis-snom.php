@@ -18,6 +18,20 @@ License: GPL
 GitHub URI: https://github.com/wp-orbis/wp-orbis-snom
 */
 
+function orbis_snom_bootstrap() {
+	// Classes
+	require_once 'classes/orbis-snom-plugin.php';
+
+	// Initialize
+	global $orbis_snom_plugin;
+
+	$orbis_snom_plugin = new Orbis_Snom_Plugin( __FILE__ );
+}
+
+add_action( 'orbis_bootstrap', 'orbis_snom_bootstrap' );
+
+//
+
 function orbis_snom_user_profile( $user ) {
 	?>
 	<h3><?php _e( 'SNOM', 'orbis_snom' ); ?></h3>
@@ -72,13 +86,3 @@ function orbis_snom_call_form( $number = '' ) {
 
 	endif;
 }
-
-function orbis_snom_enqueue_scripts() {
-	wp_enqueue_script(
-		'orbis-snom',
-		plugins_url( 'includes/snom.js', __FILE__ ),
-		array( 'jquery' )
-	);
-}
-
-add_action( 'wp_enqueue_scripts', 'orbis_snom_enqueue_scripts' );
