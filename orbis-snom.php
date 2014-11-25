@@ -4,7 +4,7 @@ Plugin Name: Orbis SNOM
 Plugin URI: http://pronamic.eu/wp-plugins/orbis-snom/
 Description: Extends the Orbis plugin extends the Orbis plugin with some SNOM phone functions.
 
-Version: 0.1
+Version: 1.0.0
 Requires at least: 3.0
 
 Author: Pronamic
@@ -37,7 +37,7 @@ add_action( 'edit_user_profile', 'orbis_snom_user_profile' );
 function orbis_snom_user_update( $user_id ) {
 	$snom_url = filter_input( INPUT_POST, '_orbis_snom_web_user_interface_url', FILTER_SANITIZE_STRING );
 
-	if( empty ( $snom_url ) ) {
+	if ( empty ( $snom_url ) ) {
 		delete_user_meta( $user_id , '_orbis_snom_web_user_interface_url' );
 	} else {
 		update_user_meta( $user_id, '_orbis_snom_web_user_interface_url', $snom_url );
@@ -52,7 +52,7 @@ function orbis_snom_call_form( $number = '' ) {
 
 	$url = get_user_meta( $current_user->ID, '_orbis_snom_web_user_interface_url', true );
 
-	if( ! empty( $url ) && ! empty( $number ) ): ?>
+	if ( ! empty( $url ) && ! empty( $number ) ) : ?>
 
 	<form method="post" action="<?php echo esc_attr( $url ); ?>" target="_blank" class="form-inline">
 		<input name="NUMBER" type="hidden" value="<?php echo esc_attr( $number ); ?>" />
