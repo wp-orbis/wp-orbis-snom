@@ -29,7 +29,5 @@ jQuery( document ).ready( function( $ ) {
 
 		$snomInput.val( snomValue );
 		$snomIframe.attr( 'src', url );
-
-		return false;
 	} );
 } );
