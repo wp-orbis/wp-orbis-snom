@@ -73,22 +73,22 @@ class Orbis_Snom_Plugin extends Orbis_Plugin {
 					<div class="form-group">
 						<label class="sr-only" for="orbis-snom-input">Email address</label>
 
-						<input type="text" class="form-control" id="orbis-snom-input" />
+						<input type="text" class="form-control" id="orbis-snom-input" readonly="readonly" />
 					</div>
 
 					<div id="orbis-snom-numbers">
-						<button type="button" class="btn btn-default">1</button>
-						<button type="button" class="btn btn-default">2</button>
-						<button type="button" class="btn btn-default">3</button> <br />
-						<button type="button" class="btn btn-default">4</button>
-						<button type="button" class="btn btn-default">5</button>
-						<button type="button" class="btn btn-default">6</button> <br />
-						<button type="button" class="btn btn-default">7</button>
-						<button type="button" class="btn btn-default">8</button>
-						<button type="button" class="btn btn-default">9</button> <br />
-						<button type="button" class="btn btn-default">*</button>
-						<button type="button" class="btn btn-default">0</button>
-						<button type="button" class="btn btn-default">#</button>
+						<button type="button" class="btn btn-default" data-snom-key="1">1</button>
+						<button type="button" class="btn btn-default" data-snom-key="2">2</button>
+						<button type="button" class="btn btn-default" data-snom-key="3">3</button> <br />
+						<button type="button" class="btn btn-default" data-snom-key="4">4</button>
+						<button type="button" class="btn btn-default" data-snom-key="5">5</button>
+						<button type="button" class="btn btn-default" data-snom-key="6">6</button> <br />
+						<button type="button" class="btn btn-default" data-snom-key="7">7</button>
+						<button type="button" class="btn btn-default" data-snom-key="8">8</button>
+						<button type="button" class="btn btn-default" data-snom-key="9">9</button> <br />
+						<button type="button" class="btn btn-default" data-snom-key="*">*</button>
+						<button type="button" class="btn btn-default" data-snom-key="0">0</button>
+						<button type="button" class="btn btn-default" data-snom-key="#">#</button>
 					</div>
 				</form>
 			</div>

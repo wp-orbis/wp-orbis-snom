@@ -1,9 +1,21 @@
 jQuery( document ).ready( function( $ ) {
-	var $snom = $( '#orbis-snom' );
-	var $snomIframe = $( '#orbis-snom-iframe' );
-	
+	var $snom         = $( '#orbis-snom' );
+	var $snomIframe   = $( '#orbis-snom-iframe' );
+	var $snomInput    = $( '#orbis-snom-input' );
+	var snomValue     = '';
+
 	$snomIframe.load( function() {
-		console.log( 'Loaded' );
+		
+	} );
+	
+	$snom.find( 'button' ).click( function() {
+		var key = $( this ).data( 'snom-key' );
+
+		snomValue = snomValue + key;
+
+		var url = orbisSnom.commandUrl + '?' + 'key' + '=' + key;
+
+		$snomInput.val( snomValue );
 	} );
 
 	$( 'a[href^="tel:"]' ).click( function( e ) {
@@ -11,10 +23,11 @@ jQuery( document ).ready( function( $ ) {
 		
 		var number = url.substring( 4 );
 
+		snomValue = number;
+		
 		var url = orbisSnom.commandUrl + '?' + 'number' + '=' + number;
 
-		console.log( url );
-
+		$snomInput.val( snomValue );
 		$snomIframe.attr( 'src', url );
 
 		return false;
