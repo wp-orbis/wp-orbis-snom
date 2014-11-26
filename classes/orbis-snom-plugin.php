@@ -76,6 +76,11 @@ class Orbis_Snom_Plugin extends Orbis_Plugin {
 						<input type="text" class="form-control" id="orbis-snom-input" readonly="readonly" />
 					</div>
 
+					<div id="orbis-snom-actions">
+						<button type="button" class="btn btn-default pull-left" data-snom-key="CANCEL"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+						<button type="button" class="btn btn-default pull-right" data-snom-key="ENTER"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></button>
+					</div>
+
 					<div id="orbis-snom-numbers">
 						<button type="button" class="btn btn-default" data-snom-key="1">1</button>
 						<button type="button" class="btn btn-default" data-snom-key="2">2</button>

@@ -14,7 +14,7 @@
 	right: 10px;
 
 	width: 150px;
-	height: 220px;
+	height: 100px;
 	
 	padding: 10px;
 }
@@ -25,9 +25,17 @@
 
 #orbis-snom-input {
 	width: 130px;
+
+	margin-bottom: 10px;
+}
+
+#orbis-snom-actions {
+
 }
 
 #orbis-snom-numbers {
+	display: none;
+
 	margin: 2px -2px;	
 }
 

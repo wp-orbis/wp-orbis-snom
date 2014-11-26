@@ -7,15 +7,17 @@ jQuery( document ).ready( function( $ ) {
 	$snomIframe.load( function() {
 		
 	} );
-	
+
 	$snom.find( 'button' ).click( function() {
 		var key = $( this ).data( 'snom-key' );
 
-		snomValue = snomValue + key;
+		// snomValue = snomValue + key;
 
 		var url = orbisSnom.commandUrl + '?' + 'key' + '=' + key;
 
-		$snomInput.val( snomValue );
+		// $snomInput.val( snomValue );
+
+		$snomIframe.attr( 'src', url );
 	} );
 
 	$( 'a[href^="tel:"]' ).click( function( e ) {
