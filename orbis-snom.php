@@ -21,6 +21,7 @@ GitHub URI: https://github.com/wp-orbis/wp-orbis-snom
 function orbis_snom_bootstrap() {
 	// Classes
 	require_once 'classes/orbis-snom-plugin.php';
+	require_once 'classes/orbis-snom-admin.php';
 
 	// Initialize
 	global $orbis_snom_plugin;
@@ -29,60 +30,3 @@ function orbis_snom_bootstrap() {
 }
 
 add_action( 'orbis_bootstrap', 'orbis_snom_bootstrap' );
-
-//
-
-function orbis_snom_user_profile( $user ) {
-	?>
-	<h3><?php _e( 'SNOM', 'orbis_snom' ); ?></h3>
-
-	<table class="form-table">
-		<tr>
-			<th>
-				<label for="orbis_snom_web_user_interface_url">
-					<?php _e( 'Web User Interface URL', 'orbis_snom' ); ?>
-				</label>
-			</th>
-			<td>
-				<input id="orbis_snom_web_user_interface_url" type="text" name="_orbis_snom_web_user_interface_url" value="<?php echo esc_attr( get_user_meta( $user->ID, '_orbis_snom_web_user_interface_url', true ) ); ?>" />
-			</td>
-		</tr>
-	</table>
-	<?php
-}
-
-add_action( 'show_user_profile', 'orbis_snom_user_profile' );
-add_action( 'edit_user_profile', 'orbis_snom_user_profile' );
-
-function orbis_snom_user_update( $user_id ) {
-	$snom_url = filter_input( INPUT_POST, '_orbis_snom_web_user_interface_url', FILTER_SANITIZE_STRING );
-
-	if ( empty( $snom_url ) ) {
-		delete_user_meta( $user_id , '_orbis_snom_web_user_interface_url' );
-	} else {
-		update_user_meta( $user_id, '_orbis_snom_web_user_interface_url', $snom_url );
-	}
-}
-
-add_action( 'personal_options_update', 'orbis_snom_user_update' );
-add_action( 'edit_user_profile_update', 'orbis_snom_user_update' );
-
-function orbis_snom_call_form( $number = '' ) {
-	$current_user = wp_get_current_user();
-
-	$url = get_user_meta( $current_user->ID, '_orbis_snom_web_user_interface_url', true );
-
-	if ( ! empty( $url ) && ! empty( $number ) ) : ?>
-
-	<form method="post" action="<?php echo esc_attr( $url ); ?>" target="_blank" class="form-inline">
-		<input name="NUMBER" type="hidden" value="<?php echo esc_attr( $number ); ?>" />
-		<button name="DIAL" type="submit" class="btn">
-			<i class="icon-headphones"></i>
-			<?php _e( 'Call', 'orbis_snom' ); ?>
-		</button>
-	</form>
-
-	<?php
-
-	endif;
-}

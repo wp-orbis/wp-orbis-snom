@@ -21,7 +21,7 @@ WordPress installation and then activate the Plugin from Plugins page.
 == Changelog ==
 
 = 1.0.0 =
-*	Rewrite.
+*	Completely rewritten.
 
 = 0.1 =
 *	Initial release

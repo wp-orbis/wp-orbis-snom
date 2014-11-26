@@ -13,7 +13,7 @@ class Orbis_Snom_Plugin extends Orbis_Plugin {
 
 		// Admin
 		if ( is_admin() ) {
-
+			$this->admin = new Orbis_Snom_Admin( $this );
 		}
 	}
 
@@ -76,9 +76,24 @@ class Orbis_Snom_Plugin extends Orbis_Plugin {
 						<input type="text" class="form-control" id="orbis-snom-input" readonly="readonly" />
 					</div>
 
-					<div id="orbis-snom-actions">
+					<div id="orbis-snom-actions" class="clearfix">
 						<button type="button" class="btn btn-default pull-left" data-snom-key="CANCEL"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
 						<button type="button" class="btn btn-default pull-right" data-snom-key="ENTER"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></button>
+					</div>
+
+					<div id="orbis-snom-powerd-by">
+						<?php 
+
+						printf(
+							__( 'Powered by %s', 'orbis_snom' ),
+							sprintf(
+								'<img src="%s" alt="%s" width="40" />',
+								esc_attr( $this->plugin_url( 'assets/images/snom-logo.png' ) ),
+								esc_attr__( 'SNOM', 'orbis_snom' )
+							)
+						);
+
+						?>
 					</div>
 
 					<div id="orbis-snom-numbers">

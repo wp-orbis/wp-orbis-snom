@@ -10,11 +10,11 @@
 
 	position: fixed;
 	
-	bottom: 10px;
-	right: 10px;
+	bottom: 20px;
+	right: 20px;
 
 	width: 150px;
-	height: 100px;
+	height: 130px;
 	
 	padding: 10px;
 }
@@ -30,7 +30,7 @@
 }
 
 #orbis-snom-actions {
-
+	margin-bottom: 10px;	
 }
 
 #orbis-snom-numbers {
