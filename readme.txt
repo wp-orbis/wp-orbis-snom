@@ -4,7 +4,7 @@ Tags: orbis, snom, phone
 Donate link: http://pronamic.eu/donate/?for=wp-plugin-orbis-snom&source=wp-plugin-readme-txt
 Requires at least: 3.0
 Tested up to: 3.4.1
-Stable tag: 0.1
+Stable tag: 1.0.0
 
 This WordPress plugin extends the Orbis plugin with some SNOM phone functions.
 
@@ -19,6 +19,9 @@ WordPress installation and then activate the Plugin from Plugins page.
 
 
 == Changelog ==
+
+= 1.0.0 =
+*	Completely rewritten.
 
 = 0.1 =
 *	Initial release

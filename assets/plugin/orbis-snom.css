@@ -1,0 +1,50 @@
+#orbis-snom {
+	background: #FFF;
+	
+	border: 1px solid #C3C3C3;
+	border-radius: 10px;
+
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.5);
+	-moz-box-shadow:    0px 0px 10px 0px rgba(50, 50, 50, 0.5);
+	box-shadow:         0px 0px 10px 0px rgba(50, 50, 50, 0.5);
+
+	position: fixed;
+	
+	bottom: 20px;
+	right: 20px;
+
+	width: 150px;
+	height: 130px;
+	
+	padding: 10px;
+}
+
+#orbis-snom-iframe {
+	display: none;
+}
+
+#orbis-snom-input {
+	width: 130px;
+
+	margin-bottom: 10px;
+}
+
+#orbis-snom-actions {
+	margin-bottom: 10px;	
+}
+
+#orbis-snom-numbers {
+	display: none;
+
+	margin: 2px -2px;	
+}
+
+#orbis-snom-numbers button {
+	display: block;
+
+	float: left;
+	
+	margin: 2px;
+
+	width: 40px;
+}

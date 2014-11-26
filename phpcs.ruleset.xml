@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<ruleset name="Orbis SNOM">
+	<rule ref="WordPress">
+		<exclude name="Generic.WhiteSpace.ScopeIndent.Incorrect" />
+		
+		<exclude name="WordPress.VIP.RestrictedFunctions.user_meta" />
+	</rule>
+</ruleset>
