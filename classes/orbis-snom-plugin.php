@@ -67,7 +67,7 @@ class Orbis_Snom_Plugin extends Orbis_Plugin {
 		if ( $url ) : ?>
 
 			<div id="orbis-snom">
-				<iframe id="orbis-snom-iframe" src="<?php echo esc_attr( $url ); ?>"></iframe>
+				<iframe id="orbis-snom-iframe"></iframe>
 
 				<form class="form-inline" role="form">
 					<div class="form-group">
